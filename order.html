@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Order Example</title>
+	<link rel="stylesheet" type="text/css" href ="order.css">
+</head>
+<body ng-app="mainapp" ng-controller="mainctrl">
+<div class="order-border1">
+	<p class="order-title">N Fresh</p>
+<ul>
+	<li ng-repeat="item in items" class="order-border" ng-click="toggle(item)" ng-class="{active:item.active}">{{item.brand}} 	{{item.price|currency}}</li>
+</ul>
+<p>{{cart()|currency}}</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script type="text/javascript" src="mainctrl.js"></script>
+</body>
+</html>

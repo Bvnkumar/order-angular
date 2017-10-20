@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search </title>
+</head>
+<body  ng-app="mainapp" ng-controller="mainctrl">
+<input type="text" ng-model="searchdata">
+<ul>
+	<li ng-repeat="i in item|searchFor:searchdata">{{i.name}}</li>
+</ul>
+<p ng-bind="slogan"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script type="text/javascript" src="mainsearchctrl.js"></script>
+</body>
+</html>
